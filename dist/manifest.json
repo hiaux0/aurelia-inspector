@@ -9,12 +9,12 @@
     "48": "images/48.png",
     "128": "images/128.png"
   },
-  "web_accessible_resources": ["devtools.html", "devtools-background.html"],
+  "web_accessible_resources": ["browser-polyfill.js", "devtools.html", "devtools-background.html"],
   "content_scripts": [
     {
       "all_frames": true,
       "matches": ["<all_urls>"],
-      "js": ["build/contentscript.js"],
+      "js": ["browser-polyfill.js", "build/contentscript.js"],
       "run_at": "document_start"
     }   ,
     {
@@ -35,7 +35,7 @@
     "default_popup": "popups/missing.html"
   },
   "background": {
-    "scripts": ["build/background.js"],
+    "scripts": ["browser-polyfill.js", "build/background.js"],
     "persistent": false
   },
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",

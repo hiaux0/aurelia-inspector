@@ -8,3 +8,7 @@ chrome.runtime.onMessage.addListener((req, sender) => {
     );
   }
 });
+
+browser.devtools.panels.elements.createSidebarPane('Aurelia').then(sidebar => {
+  sidebar.setPage('index-v2.html');
+})
