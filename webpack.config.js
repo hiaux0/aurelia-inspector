@@ -58,6 +58,7 @@ module.exports = function (env, { analyze }) {
           { from: 'index-v1.html', to: '' },
           { from: 'manifest.json', to: '' },
           { from: 'src/devtools', to: '' },
+          { from: 'node_modules/webextension-polyfill/dist/browser-polyfill.js', to: '' },
         ],
       }),
     ].filter(p => p)
